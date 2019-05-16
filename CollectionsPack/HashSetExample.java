@@ -45,9 +45,10 @@ public class HashSetExample {
 		//arrayWithObject();
 		//arrayWithString();
 		iteratorExample();
+		forEachExample();
 	}
 		
-	static void arrayWithObject(){	
+	static void arrayWithObject(){
 		Object sArray[]=hs.toArray();
 		for(int i=0;i<sArray.length;i++){
 			System.out.println(sArray[i]);
@@ -58,7 +59,7 @@ public class HashSetExample {
 			System.out.println(s);
 		}
 	}
-		
+	
 	static void arrayWithString(){
 		
 		String sArray[]=new String[hs.size()];
@@ -78,6 +79,11 @@ public class HashSetExample {
 			s=it.next();
 			System.out.println(s);
 			it.remove();
+		}
+	}
+	static void forEachExample(){
+		for(String s:hs){
+			System.out.println(s);
 		}
 	}
 	
