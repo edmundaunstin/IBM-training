@@ -1,3 +1,4 @@
+package ThreadPack;
 public class ThreadExample{
 	public static void main(String args[]) throws Exception{
 		MyThread t1=new MyThread();
