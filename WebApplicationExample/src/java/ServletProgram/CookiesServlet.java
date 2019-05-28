@@ -12,48 +12,42 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
 
+@WebServlet(name = "CookiesServlet", urlPatterns = {"/CookiesServlet"})
+public class CookiesServlet extends HttpServlet {
 
-@WebServlet(name = "HiddenFormField_SecondServlet", urlPatterns = {"/HiddenFormField_SecondServlet"})
-public class HiddenFormField_SecondServlet extends HttpServlet {
-
-  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
     }
 
- 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response); 
-        String s=request.getParameter("val1");
-         String p=request.getParameter("val2");
+        processRequest(request, response);
         
-         response.setContentType("text/html");   
+         String s=request.getParameter("name");
+         String p=request.getParameter("value");
+          Cookie cookie=new Cookie(s,p);
+           cookie.setMaxAge(24*60);
+         response.setContentType("text/html");
+    
          PrintWriter out=response.getWriter(); 
-         
-         
-                 
-            out.println("<html>");
-            out.println("<head>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<H1>");
-            out.println("<div>");
-            out.println( "<h2>value 1:" +s);
-            out.println("<br>");
-            out.println( "<h2>value 2:" +p);
-            out.println("</div>");
-            
-            out.println("</body>");
-            out.println("</html>");
-        
-        
+          
+          out.println("<html>");
+         out.println("<head>");
+       out.println("</head>");
+       out.println("<body>");
+       out.println("<H1>");
+       out.println("<div>");
+       out.println("cookie value"+cookie.getName());
+       out.println("</div>");
+       out.println("</body>");
+       out.println("</html>");
         
     }
 
+  
    
 }
