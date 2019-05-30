@@ -1,0 +1,14 @@
+SMAP
+IncludeExample_jsp.java
+JSP
+*S JSP
+*F
++ 0 IncludeExample.jsp
+IncludeExample.jsp
++ 1 Sample.txt
+Sample.txt
+*L
+5,12:49
+1#1,5:61
+16#0,4:65
+*E
