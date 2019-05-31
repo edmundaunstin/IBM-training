@@ -10,8 +10,16 @@ public class JavaBeanClass {
     
     public JavaBeanClass()
     {
-    super();
+        super();
     }
+    
+    public JavaBeanClass(String id,String name,String dept,String desg) {
+		super();
+		this.empId=id;
+		this.empName=name;
+		this.empDept=dept;
+		this.empDeg=desg;
+	}
 
     public String getEmpId() {
         return empId;

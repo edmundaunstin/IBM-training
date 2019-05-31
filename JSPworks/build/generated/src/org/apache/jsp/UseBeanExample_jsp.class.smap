@@ -1,0 +1,19 @@
+SMAP
+UseBeanExample_jsp.java
+JSP
+*S JSP
+*F
++ 0 UseBeanExample.jsp
+UseBeanExample.jsp
+*L
+1,12:45
+14,2:58
+15:60
+16,4:61,3
+20,2:73
+22:75,10
+23,4:85,3
+27,2:97
+29,4:99,3
+33,3:111
+*E
