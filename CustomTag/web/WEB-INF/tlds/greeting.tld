@@ -10,9 +10,14 @@
 <shortname>mytags</shortname>
 
 <tag>
-<name>welcome</name>
+<name>greeting</name>
 <tagclass>Tags.GreetingTagHandler</tagclass>
 <bodycontent>empty</bodycontent>
+<attribute>
+    <name>name</name>
+    <required>true</required>
+</attribute> 
 </tag>
+
 
 </taglib>

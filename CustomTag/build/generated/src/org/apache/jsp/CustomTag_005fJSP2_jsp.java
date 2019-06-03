@@ -16,7 +16,7 @@ public final class CustomTag_005fJSP2_jsp extends org.apache.jasper.runtime.Http
     _jspx_dependants.add("/WEB-INF/tlds/greeting.tld");
   }
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_myapp_welcome_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_myapp_greeting_name_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -25,11 +25,11 @@ public final class CustomTag_005fJSP2_jsp extends org.apache.jasper.runtime.Http
   }
 
   public void _jspInit() {
-    _jspx_tagPool_myapp_welcome_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_myapp_greeting_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_myapp_welcome_nobody.release();
+    _jspx_tagPool_myapp_greeting_name_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -70,7 +70,7 @@ public final class CustomTag_005fJSP2_jsp extends org.apache.jasper.runtime.Http
       out.write("    <body>\n");
       out.write("        <h1>Hello World!</h1>\n");
       out.write("        ");
-      if (_jspx_meth_myapp_welcome_0(_jspx_page_context))
+      if (_jspx_meth_myapp_greeting_0(_jspx_page_context))
         return;
       out.write("\n");
       out.write("    </body>\n");
@@ -88,20 +88,21 @@ public final class CustomTag_005fJSP2_jsp extends org.apache.jasper.runtime.Http
     }
   }
 
-  private boolean _jspx_meth_myapp_welcome_0(PageContext _jspx_page_context)
+  private boolean _jspx_meth_myapp_greeting_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  myapp:welcome
-    Tags.GreetingTagHandler _jspx_th_myapp_welcome_0 = (Tags.GreetingTagHandler) _jspx_tagPool_myapp_welcome_nobody.get(Tags.GreetingTagHandler.class);
-    _jspx_th_myapp_welcome_0.setPageContext(_jspx_page_context);
-    _jspx_th_myapp_welcome_0.setParent(null);
-    int _jspx_eval_myapp_welcome_0 = _jspx_th_myapp_welcome_0.doStartTag();
-    if (_jspx_th_myapp_welcome_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_myapp_welcome_nobody.reuse(_jspx_th_myapp_welcome_0);
+    //  myapp:greeting
+    Tags.GreetingTagHandler _jspx_th_myapp_greeting_0 = (Tags.GreetingTagHandler) _jspx_tagPool_myapp_greeting_name_nobody.get(Tags.GreetingTagHandler.class);
+    _jspx_th_myapp_greeting_0.setPageContext(_jspx_page_context);
+    _jspx_th_myapp_greeting_0.setParent(null);
+    _jspx_th_myapp_greeting_0.setName("AUNSTIN");
+    int _jspx_eval_myapp_greeting_0 = _jspx_th_myapp_greeting_0.doStartTag();
+    if (_jspx_th_myapp_greeting_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_myapp_greeting_name_nobody.reuse(_jspx_th_myapp_greeting_0);
       return true;
     }
-    _jspx_tagPool_myapp_welcome_nobody.reuse(_jspx_th_myapp_welcome_0);
+    _jspx_tagPool_myapp_greeting_name_nobody.reuse(_jspx_th_myapp_greeting_0);
     return false;
   }
 }

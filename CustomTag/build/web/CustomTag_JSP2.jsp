@@ -15,6 +15,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <myapp:welcome/>
+        <myapp:greeting name="AUNSTIN" />
     </body>
 </html>
