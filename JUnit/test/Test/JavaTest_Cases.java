@@ -22,6 +22,7 @@ public class JavaTest_Cases {
     @Before
     public void setUp() {
         a = new Calculator();
+        
     }
     
     @After
